@@ -4,9 +4,315 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Tickets</title>
     <link href="css/font-awesome.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700,900" rel="stylesheet">
 </head>  
+<style>
+
+body{
+    margin: auto;
+    font-family: "Roboto Condensed";
+}
+/*header stuff*/
+header{
+    padding-top: 0;
+    width: 100%;
+    background-color: black;
+    color:white;
+    height:32px;
+    border-bottom: 3px solid white;
+}
+header h2{
+    float: left;
+    padding-left: 2%;
+    margin-top: 2px;
+}
+header button{
+    height:100%;
+    background-color: black;
+    color:white;
+    float: right;
+    border:none;
+    border-left: 1px solid white;
+    font-size: 20px;
+}
+#btnBuyTickets{
+    width: 80%;
+    height:15%;
+    background-color: white;
+    color:black;
+    border:none;
+    border-bottom: 2px solid black;
+    padding:0 10% 10px 10%;
+    position: absolute;
+    font-weight: 800;
+    font-size: 28px;
+    top:6%;
+}
+.hButtons{
+    text-align: center;
+    display: none;
+    width: 19.33%;
+    color: black;
+    font-weight: bold;
+    float: left;
+    background-color: white;
+    border-left: 1px solid black;
+}
+#creativeBtn{
+    width: 30%;
+}
+#ticketsBtn{
+    background-color: black;
+    color: white;
+}
+/*main stuff*/
+main{
+    width: 100%;
+    text-align: center;
+}
+main table{
+    border:14px solid white;
+    padding-top:100px;
+    display: inline-table;
+}
+main table th{
+    border:7px solid white;
+}
+main table td{
+    border:7px solid white;
+}
+#desktopTable{
+    display: none;
+    border-collapse:collapse;
+}
+#desktopTable button{
+    border: none;
+    font-weight: bold;
+    height: 40px;
+    width: 178px;
+    margin-top: 10px;
+}
+.fRow{
+    text-align: left;
+    padding-bottom: 160px;
+}
+.allTickets{
+    width: 147px;
+    float: left;
+}
+#desktopTable th{
+    border: 1px;
+    border:none !important;
+}
+#desktopTable td{
+    border: 1px;
+    border-top: 1px solid white;
+    height:46px;
+}
+#desktopTable .White, #desktopTable .Black{
+    border-top: 1px solid rgb(115,115,115);
+}
+.desc{
+    width:400px;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 10px;
+    border:none !important;
+}
+.ticketInfo .fa{
+    font-size: 60px;
+}
+.price{
+    font-size: 45px;
+    font-weight: 800;
+}
+.seal{
+    position: absolute;
+    margin-left: 5px;
+    float:right;
+    margin-top: -10px;
+    width:1px;
+    border:1px solid black;
+    display:block;
+    text-align: center;
+    font-size: 7px;
+    font-weight: bold;
+    border-radius: 50%;
+    width:38px;
+    height:38px;
+}
+.ticketInfo{
+    height: 221px;
+    width: 207px;
+    background-color: yellow;
+    font-size: 21px;
+}
+.buyBtn{
+    height:35px;
+    width: 207px;
+}
+.featInfo{
+    height: 129px;
+    width: 207px;
+    background-color: white;
+}
+.buyBtn button{
+    border:none;
+    width:100%;
+    height: 100%;
+    font-weight: bold;
+}
+ul{
+    left:-10px;
+    position: relative;
+    text-align: left;
+    font-weight: lighter;
+    font-size: 14px;
+}
+/*footer shtuffz*/
+footer{
+    width: 100%;
+    text-align: center;
+    height: 260px;
+}
+footer h1{
+    display: block;
+    font-size: 41px;
+}
+footer nav{
+    display: inline-table;
+    padding-bottom: 25px;
+}
+footer p{
+    font-weight: bold;
+    display: none;
+}
+.alertInput{
+    border: 3px solid black;
+    font-weight: bold;
+    text-align: center;
+    height: 42px;
+    -webkit-text-fill-color: black;
+}
+#btnAlert{
+    height: 47px;
+    width: 172px;
+    border-top: none;
+}
+#firstName{
+    width: 211px;
+}
+#lastName{
+    width:211px;
+    border-left: none;
+}
+#eMail{
+    width: 256px;
+    border-top: none;
+    border-right: none;
+}
+/*menu (tappin' da top right button)*/
+#phantomHeader{
+    width: 100%;
+    background-color: black;
+    color:white;
+    height:32px;
+}
+#mnbtns{
+    position: absolute;
+    top:32px;
+    width: 100%;
+}
+#menu{
+    display: none;
+    top:0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 5;
+}
+.headerBtn{
+    height: 42px;
+    border:none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+}
+/*colorz!*/
+.Gray{
+    background-color: rgb(230,231,233);
+    color:black;
+}
+.Yellow{
+    background-color: rgb(255,242,0);
+    color:black;
+}
+.White{
+    background-color: white;
+    color:black;
+}
+.Black{
+    background-color: black;
+    color:white;
+}
+/*Desktop Reolution Settings*/
+@media screen and (min-width: 1000px) {
+    #menu{
+        visibility: hidden;
+    }
+
+    footer h1{
+        font-size: 50px;
+    }
+    footer p{
+        display: initial;
+    }
+    .alertInput{
+        border: none;
+        width: 25%;
+    }
+    #firstName{
+        border:3px solid black;
+    }
+    #btnAlert{
+        border:3px solid black;
+        border-left: none;
+        height:50px;
+    }
+    #lastName,#eMail{
+        border:3px solid black;
+        border-left: none;
+    }
+    #btnBuyTickets{
+        display: none;
+    }
+    header{
+        background-color: white;
+        color: black;
+        height:37px;
+        border-bottom: 3px solid black;
+    }
+    header h2{
+        font-size: 26px;
+        width:10%;
+    }
+    header button{
+        display: none;
+    }
+    .hButtons{
+        display: initial;
+    }
+    main table{
+        display: none;
+    }
+    #desktopTable{
+        display: initial;
+    }
+}
+</style>
 <body>
     <header><h2>-ING</h2>
         <button  id="btnMenu"><i class="fa fa-navicon"></i></button>
@@ -239,7 +545,7 @@
         </nav></br>
         <p>We promise to only email you when we have something important, we love our inboxes clean too!</p>
     </footer>
-    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
             $("#btnMenu").on("click",function(){
