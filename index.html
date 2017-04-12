@@ -10,6 +10,7 @@
 body{
     margin: auto;
     font-family: "Roboto Condensed";
+    min-width: 320px;
 }
 /*header stuff*/
 header{
@@ -46,7 +47,7 @@ header button{
     background-color: white;
     color:black;
     border:none;
-    margin-left: 10%;
+    margin:0 auto;
     padding-bottom: 5%;
     font-weight: 800;
     font-size: 28px;
@@ -76,22 +77,22 @@ main{
 }
 main table{
     border:14px solid white;
-    
-    display: inline-table;
     border-top: 2px solid black;
+    margin:0 auto;
 }
 main table th{
     border:7px solid white;
 }
 main table td{
     border:7px solid white;
+    vertical-align: top;
 }
 #desktopTable{
     display: none;
     width: 96%;
     height: 56.5%;
-    padding-left:2%;
     padding-right:2%;
+    padding-left:2%;
     border-collapse:collapse;
     border-top: none;
 }
@@ -178,7 +179,6 @@ main table td{
 }
 ul{
     left:-10px;
-    position: relative;
     text-align: left;
     font-weight: lighter;
     font-size: 14px;
