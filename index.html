@@ -12,9 +12,7 @@ body{
     font-family: "Roboto Condensed";
     display: block;
 }
-html{
-    min-width: 320px;
-}
+
 /*header stuff*/
 header{
     padding-top: 1px;
@@ -75,18 +73,19 @@ header button{
 }
 /*main stuff*/
 main{
-    width: 98%;
+    min-width: 320px;
+    width: 96%;
     text-align: center;
+    margin:auto 0;
 }
-main table{
-    border:14px solid white;
+table{
+    text-align: center;
     border-top: 2px solid black;
-    margin:0 auto;
 }
-main table th{
+table th{
     border:7px solid white;
 }
-main table td{
+table td{
     border:7px solid white;
     vertical-align: top;
 }
@@ -113,7 +112,7 @@ main table td{
     padding-bottom: 160px;
 }
 .allTickets{
-    width: 147px;
+    width: 12%;
     float: left;
 }
 #desktopTable th{
@@ -160,7 +159,7 @@ main table td{
 }
 .ticketInfo{
     height: 221px;
-    width: 207px;
+    width: 15%;
     background-color: yellow;
     font-size: 21px;
 }
@@ -272,7 +271,7 @@ footer p{
     color:white;
 }
 /*Desktop Reolution Settings*/
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 900px) {
     #menu{
         visibility: hidden;
     }
@@ -305,7 +304,7 @@ footer p{
     .hButtons{
         display: initial;
     }
-    main table{
+    table{
         display: none;
     }
     #desktopTable{
